@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+.clearfix {
+  float: none;
+  clear: both;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -302,8 +307,15 @@ footer {
     line-height: 70px;
   }
 
+  #portafolio .box {
+    display: block;
+    min-height: 520px;
+    float: left;
+  }
+
   #servicios .box {
     width: 33%;
+    min-height: 553px;
   }
 
   #servicios .box h3,
