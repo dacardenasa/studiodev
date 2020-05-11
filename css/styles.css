@@ -2,9 +2,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-
 }
 
 .home-wrapper {
@@ -20,13 +17,20 @@ header {
     background-color: rgba(48,48,48, 0.5);
 }
 
-img {
-    width: 200px;
+.logo {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo img {
+    display: block;
+    width: 180px;
 }
 
 header nav {
-    float: right;
-    margin-top: 10px;
+    width: 100%;
+    margin: 20px auto;
 }
 
 header nav a {
@@ -35,7 +39,7 @@ header nav a {
     text-decoration: none;
     margin-left: 10px;
     padding: 10px 15px;
-    
+    font-size: 13px;
 }
 
 header nav a.active {
@@ -43,16 +47,40 @@ header nav a.active {
     border-radius: 3px;
 }
 
+
+.container {
+    width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+footer {
+    padding: 90px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
 #home {
+    width: 100%;
     text-align: center;
     padding: 200px 0 150px;
 }
 
 #home h1 {
-    font-size: 68px;
+    font-size: 50px;
     font-weight: normal;
     line-height: 1.2;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 #home .divider {
@@ -62,8 +90,9 @@ header nav a.active {
 }
 
 #home p {
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 40px;
+    padding: 20px;
 }
 
 #home .social {
@@ -87,14 +116,26 @@ header nav a.active {
 }
 
 #home .social a:hover {
-  background-color: #fed136;
+    background-color: #fed136;
+}
+
+#servicios {
+    width: 100%;
 }
 
 #servicios .box {
     display: inline-block;
     text-align: center;
-    width: 33%;
+    width: 100%;
     padding: 10px;
+}
+
+#servicios .box .info {
+    width: 100%;
+}
+
+#servicios .box .info p{
+    font: 20px;
 }
 
 #video {
@@ -104,6 +145,7 @@ header nav a.active {
 }
 
 #portafolio {
+    width: 100%;
     background-color: whitesmoke;
 }
 
@@ -114,9 +156,9 @@ header nav a.active {
 #portafolio .box  {
     display: inline-block;
     text-align: center;
-    width: 31%;
-    margin: 1%;
+    width: 100%;
     background-color: white;
+    padding: 20px;
 }
 
 #portafolio  .box p  {
@@ -125,6 +167,7 @@ header nav a.active {
 }
 
 #contacto {
+    width: 100%;
     background-color: #303030;
     background-image: url('../images/map-image.png');
     background-position: center;
@@ -158,6 +201,7 @@ header nav a.active {
     font-size: 18px;
     line-height: 1;
     font-weight: bold;
+    cursor: pointer;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
@@ -168,24 +212,119 @@ header nav a.active {
     
 }
 
-footer {
-    padding: 90px 0;
-    text-align: center;
-    font-size: 18px;
+@media (min-width: 768px) {
+    .logo {
+        width: 30%;
+        float: left;
+        margin-top: 10px;
+    }
+    
+    header nav {
+        width: 70%;
+        float: right;
+    }
+
+    header nav a {
+        font-size: 15px;
+    }
+
+    #servicios .box {
+        width: 49%;
+    }
+
+    #portafolio .box  {
+        width: 48%;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
 }
 
-section {
-    padding: 80px 0;
+@media (min-width: 992px) {
+    .logo {
+        width: 30%;
+        float: left;
+        margin-top: 10px;
+    }
+    
+    header nav {
+        width: 70%;
+        float: right;
+        padding-left: 200px;
+    }
+
+    #servicios .box {
+        width: 33%;
+    }
+
+    #portafolio .box  {
+        width: 32%;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
 }
 
-section h2 {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 80px;
+@media (min-width: 1200px) {
+
+    .container {
+        width: 1200px;
+    }
+
+    section h2 {
+        font-size: 40px;
+    }
+
+    header nav {
+        padding-left: 280px;
+    }
+
+    header nav a {
+        font-size: 20px;
+    }
+
+    #home h1 {
+        font-size: 60px;
+    }
+
+    #home p {
+        font-size: 35px;
+    }
+
+    #home .social a {
+        font-size: 50px;
+        height: 70px;
+        width: 70px;
+        line-height: 70px;
+    }
+
+    #servicios .box {
+        width: 33%;
+    }
+
+    #servicios .box h3,
+    #portafolio .box h3 {
+        font-size: 30px;
+    }
+
+    #servicios .box p,
+    #portafolio .box p {
+        font-size: 25px;
+    }
+
+    #contacto h2 {
+        font-size: 50px;
+    }
+
+    #contacto input,
+    #contacto textarea {
+        width: 500px;
+    }
+
+    footer {
+        font-size: 30px;
+    }
+
 }
 
-.container {
-    width: 992px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
